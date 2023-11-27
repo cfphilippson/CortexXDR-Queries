@@ -1,0 +1,3 @@
+dataset = xdr_data
+| filter agent_hostname != "" and event_type = FILE and action_file_path =  "*BraveSoftware"
+| fields agent_hostname, action_file_path, event_timestamp
