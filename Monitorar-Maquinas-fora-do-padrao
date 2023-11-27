@@ -1,0 +1,6 @@
+//Regra para monitorar máquinas fora do padrão Suzano
+config case_sensitive = false | //essa linha serve para ativar ou não o atributo case sensitive
+dataset = endpoints //setando o dataset para endpoints
+| filter (endpoint_name not contains "DDEL" and endpoint_name not contains "NDEL" and endpoint_name not contains "NHP" and endpoint_name not contains "DHP" and endpoint_name not contains "DLEN" and endpoint_name not contains "DLEN" and endpoint_name not contains "VDI")
+| filter (operating_system not contains "Server") //filtrando o que desejamos trazer de parâmetros
+| fields endpoint_name as Hostname, user as User, endpoint_status as Status, operating_system as Operating_System //resposta na tela em forma de tabela
