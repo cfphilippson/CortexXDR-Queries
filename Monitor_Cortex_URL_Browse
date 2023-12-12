@@ -1,0 +1,3 @@
+config case_sensitive = false 
+| preset = network_story 
+| filter dst_action_external_hostname = "files.catbox.moe" or dns_query_name = "files.catbox.moe" or action_external_hostname = "files.catbox.moe"
