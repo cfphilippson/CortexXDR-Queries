@@ -1,6 +1,6 @@
 config case_sensitive = false |
 dataset = endpoints
-| filter endpoint_name !~= "brmo|BRMO|VDIWIN|NDEL|DDEL|NLEN|DLEN|NHP|DHP|VDI|DBRG|FC"
+| filter endpoint_name !~= "Colocar os padrões de máquina"
 | filter operating_system !~= "Server"
 | filter installation_package !~= "Linux"
 | alter install_date = timestamp_diff(current_time(), install_date, "DAY")
